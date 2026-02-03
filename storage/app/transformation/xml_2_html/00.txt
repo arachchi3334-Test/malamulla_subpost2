@@ -1,0 +1,21 @@
+﻿<!-- Auto Tag Table for HMSCQ08-AutoTag application -->
+<!-- Template is as follows -->
+<!-- There are 3 columns -->
+<!-- Column 1 = R - For Regular Expressions -->
+<!-- Column 1 = N - For Normal Search and Replace -->
+<!-- Column 2 = Search Item -->
+<!-- Column 3 = Replace Item -->
+
+<!-- The separator is |||  -->
+
+R|||<\?TLHeader [^>]*>|||
+R|||<\?TLHeader1 [^>]*>|||
+R|||<\!ENTITY  [^>]*>|||
+R|||<\!DOCTYPE  [^>]*>|||
+
+N|||&|||[amp;]
+
+R|||(<!)(DOCTYPE[^>]*)(>)|||$1--$2--$3
+
+N|||<xi:include |||<xi_include 
+N|||xmlns:xi="http://www.w3.org/2001/XInclude"|||xmlns_xi="http://www.w3.org/2001/XInclude"
